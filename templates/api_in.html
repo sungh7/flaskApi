@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API_IN</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Page</th>
+                <th>MANUFACTURER_AND_DISTRIBUTOR</th>
+                <th>Date_Released</th>
+                <th>Date_Available</th>
+                <th>NAME_OF_DEVICE</th>
+                <th>DESCRIPTION</th>
+                <th>MATERIALS</th>
+                <th>GENERAL_USE</th>
+                <th>SPECIFIC_INDICATIONS</th>
+                <th>SPECIFIC_FEATURES</th>
+                <th>SIZES_AVAILABLE</th>
+                <th>INSTRUMENTATION</th>
+                <th>SPECIAL_REMARKS</th>
+                <th>REFERENCES_</th>
+                <th>SPECIAL_FEATURES</th>
+            </tr>
+            {% for row in results %}
+            <tr>
+                <td> {{ row['Page'] }} </td>
+                <td> {{ row['MANUFACTURER_AND_DISTRIBUTOR'] }} </td>
+                <td> {{ row['Date_Released']|string }} </td>
+                <td> {{ row['Date_Available'] }} </td>
+                <td> {{ row['NAME_OF_DEVICE'] }} </td>
+                <td> {{ row['DESCRIPTION'] }} </td>
+                <td> {{ row['MATERIALS'] }} </td>
+                <td> {{ row['GENERAL_USE'] }} </td>
+                <td> {{ row['SPECIFIC_INDICATIONS'] }} </td>
+                <td> {{ row['SPECIFIC_FEATURES'] }} </td>
+                <td> {{ row['SIZES_AVAILABLE'] }} </td>
+                <td> {{ row['INSTRUMENTATION'] }} </td>
+                <td> {{ row['SPECIAL_REMARKS'] }} </td>
+                <td> {{ row['REFERENCES_'] }} </td>
+                <td> {{ row['SPECIAL_FEATURES'] }} </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
